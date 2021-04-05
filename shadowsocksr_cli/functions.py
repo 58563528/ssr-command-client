@@ -86,7 +86,7 @@ class DisplayShadowsocksr(object):
     @staticmethod
     def display_version():
         logger.info("Start get version from cloud, it will take a lot of time")
-        result = requests.get('https://tyrantlucifer.com/ssr/version.json')
+        result = requests.get('https://gitee.com/tyrantlucifer/ssr-command-client/raw/master/config-files/version.json')
         result.encoding = 'utf-8'
         version = result.json()['version']
         tips_message = result.json()['tips_message']
@@ -264,7 +264,7 @@ class GenerateClashConfig(object):
 
     @staticmethod
     def get_clash_example_config():
-        url = "https://tyrantlucifer.com/ssr/clashExample.yaml"
+        url = 'https://gitee.com/tyrantlucifer/ssr-command-client/raw/master/config-files/example.yaml'
         result = requests.get(url)
         result.encoding = 'utf-8'
         with open(init_config.clash_config_file, 'w', encoding='utf-8') as file:

@@ -290,7 +290,7 @@ class GeneratePac(object):
     @staticmethod
     def __download_pac_template():
         logger.info("Start download pac template...")
-        result = requests.get('https://tyrantlucifer.com/ssr/autoproxy.pac')
+        result = requests.get('https://gitee.com/tyrantlucifer/ssr-command-client/raw/master/config-files/autoproxy.pac')
         result.encoding = 'utf-8'
         with open(init_config.pac_file, 'w', encoding='utf-8') as file:
             file.write(result.text)

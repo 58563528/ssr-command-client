@@ -70,7 +70,7 @@ class InitConfig(object):
                                           'httpd.log')
         self.http_error_log_file = os.path.join(self.config_dir,
                                                 'httpd_error.log')
-        self.subscribe_url = 'https://tyrantlucifer.com/ssr/ssr.txt'
+        self.subscribe_url = 'https://gitee.com/tyrantlucifer/ssr-command-client/raw/master/config-files/ssr.txt'
         self.local_address = '127.0.0.1'
         self.timeout = 300
         self.workers = 1
